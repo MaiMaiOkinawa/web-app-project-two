@@ -1,0 +1,35 @@
+{
+  "data": {
+    "meta": {
+      "home": {
+        "title": "サイトタイトル",
+        "description": "サイト説明文"
+      },
+      "about": {
+        "title": "ページタイトル",
+        "description": "ページ説明文",
+        "url": "about"
+      },
+      "service": {
+        "title": "ページタイトル",
+        "description": "ページ説明文",
+        "url": "service"
+      },
+      "company": {
+        "title": "ページタイトル",
+        "description": "ページ説明文",
+        "url": "company"
+      },
+      "recruit": {
+        "title": "ページタイトル",
+        "description": "ページ説明文",
+        "url": "recruit"
+      },
+      "contact": {
+        "title": "ページタイトル",
+        "description": "ページ説明文",
+        "url": "contact"
+      }
+    }
+  }
+}

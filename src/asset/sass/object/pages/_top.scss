@@ -1,0 +1,240 @@
+@use "./../../foundation/system" as s;
+
+html {
+  max-width: 100vw;
+  padding: 0;
+  padding-top: 0.5rem;
+}
+
+body {
+  color: var(--clr-neutral-600);
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+}
+
+a {
+  color: var(--clr-neutral-100);
+  cursor: pointer;
+  font-weight: var(--fw-bold);
+  text-decoration: none;
+}
+
+h1 {
+  color: var(--clr-neutral-400);
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-primary-heading);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--size-400);
+}
+
+h2 {
+  background: -webkit-linear-gradient(#014fa1, #0568bf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-900);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--size-200);
+}
+
+h3 {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.24rem;
+}
+
+h5 {
+  color: var(--clr-neutral-100);
+  font-size: var(--fs-500);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.1125rem;
+}
+
+p,
+address {
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-semi-bold);
+}
+
+small {
+  color: var(--clr-neutral-100);
+  font-family: var(--ff-secondary);
+}
+
+/* Container */
+section {
+  padding: var(--size-700) var(--size-650);
+}
+
+.btn {
+  border: 0.063rem solid var(--clr-neutral-100);
+  border-radius: 2.5rem;
+  background: transparent;
+  letter-spacing: 0.1rem;
+  padding: 1.25rem 4.2rem;
+}
+
+// hero section
+.hero-container {
+  position: relative;
+  padding-block: 6rem;
+
+  &::before {
+    content: "";
+    height: 67.5rem;
+    position: absolute;
+    width: 115%;
+    background-image: url(./../../asset/img/top-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    inset: -25% -20% -20% -10%;
+    z-index: -1;
+  }
+
+  .hero-content {
+    color: var(--clr-neutral-100);
+    margin-left: 6.63rem;
+    padding-block: 3rem;
+
+    #company-name {
+      background: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: var(--clr-neutral-100);
+      font-size: var(--fs-850);
+      font-family: var(--ff-secondary);
+      line-height: var(--size-850);
+      letter-spacing: 0.6rem;
+      margin-bottom: var(--size-500);
+    }
+    #division {
+      background-color: var(--clr-primary-400);
+      height: 0.2rem;
+      margin-bottom: var(--size-500);
+      width: 41.875rem;
+    }
+    #company-slogan {
+      font-size: var(--fs-600);
+      letter-spacing: 0.3rem;
+    }
+  }
+  #hero-scroll {
+    top: 100%;
+    right: 0;
+    position: absolute;
+
+    i {
+      color: var(--clr-neutral-100);
+      font-size: 21.25rem;
+    }
+  }
+}
+
+// media query
+@media (max-width: 767px) {
+  :root {
+    /* FONT SIZE */
+    --fs-400: 0.875rem; /* Regular size <p>*/
+    --fs-500: 1rem; /* <h5>*/
+    --fs-600: 1.125rem; /* <h3>*/
+    --fs-900: 2.625rem; /*<h1>&<h2>*/
+
+    --fs-primary-heading: var(--fs-900);
+    --fs-body: var(--fs-400);
+  }
+
+  html {
+    font-size: 100%;
+  }
+
+  body {
+    font-size: var(--fs-body);
+  }
+
+  h1,
+  h2 {
+    font-size: var(--fs-primary-heading);
+    font-weight: var(--fw-semi-bold);
+    letter-spacing: 0.13125rem;
+  }
+
+  h3 {
+    font-size: var(--fs-600);
+    letter-spacing: 0.05625rem;
+  }
+
+  h5 {
+    font-size: var(--fs-500);
+    letter-spacing: 0.1rem;
+  }
+
+  a {
+    letter-spacing: 0.14rem;
+  }
+
+  p,
+  address {
+    font-size: 0.75rem;
+  }
+
+  small {
+    font-size: 0.625rem;
+    font-weight: var(--fw-bold);
+    letter-spacing: 0.125rem;
+  }
+
+  section {
+    padding: var(--size-400);
+  }
+
+  .btn {
+    border: 0.125rem solid var(--clr-neutral-100);
+    padding: var(--size-400) var(--size-600);
+  }
+  // hero section
+  .hero-container {
+    align-items: center;
+    padding-block: 3rem;
+
+    &::before {
+      height: 39.5rem;
+    }
+
+    .hero-content {
+      width: 20rem;
+      margin-left: 1rem;
+      margin-top: 5rem;
+
+      #company-name {
+        background: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: var(--clr-neutral-100);
+        font-size: 2.25rem;
+        font-family: var(--ff-secondary);
+        font-weight: var(--fw-semi-bold);
+        line-height: 3.375rem;
+        letter-spacing: 0.43875rem;
+        margin-bottom: 0.27rem;
+      }
+      #division {
+        height: 0.2rem;
+        margin-block: var(--size-400);
+        width: 18rem;
+      }
+      #company-slogan {
+        font-size: var(--fs-500);
+        letter-spacing: 0.2rem;
+        margin-bottom: var(--size-800);
+      }
+    }
+    #hero-scroll {
+      top: 75%;
+      position: absolute;
+
+      i {
+        color: var(--clr-neutral-100);
+        font-size: 6.25rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+/*--------------------------------------*
+ * foundation
+ *--------------------------------------*/
+@use "./foundation/reset"; // リセットCSS
+@use "./foundation/system"; // 変数や@mixinなどの共通要素
+@use "./foundation/base"; // サイト全体定義
+
+/*--------------------------------------*
+ * layout
+ *--------------------------------------*/
+@use "./layout/header"; // 共通ヘッダ
+@use "./layout/main"; // メインコンテンツ
+@use "./layout/footer"; // 共通フッタ
+@use "./layout/contact"; // contact セクション
+
+/*---------Hero layout---------------*/
+@use "./layout/hero"; // メインhero
+@use "./layout/hero-banner"; // service-page hero
+@use "./layout/hero-banner-company"; //company-page hero
+@use "./layout/hero-banner-recruit"; // recruit-page hero
+@use "./layout/hero-banner-contact"; // contact-page hero
+
+/*--------------------------------------*
+ * object
+ *--------------------------------------*/
+/*-------------------
+ * component
+ -------------------*/
+@use "./object/component/sample1"; // コンポーネント名
+
+/*-------------------
+ * pages
+ -------------------*/
+@use "./object/pages/top"; // トップページ
+
+// @use "./object/pages/about"; // アバウトページ
+@use "./object/pages/service"; // サービスページ
+
+@use "./object/pages/company"; // カンパニーページ
+
+@use "./object/pages/recruit"; // リクルートページ
+
+@use "./object/pages/contact-page"; // コンタクトページ
+
+/*-------------------
+ * utility
+ -------------------*/
+@use "./object/utility/sample2"; // ユーティリティ名

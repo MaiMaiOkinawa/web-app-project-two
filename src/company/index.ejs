@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <%_ const path='./../'; _%> <%- include('./../_component/_head', {
+    path:path,meta:data.meta['company'],}) %>
+  </head>
+  <body>
+    <%- include('./../_component/_header',{path:path,}) %>
+
+    <main>
+      <!-- banner section start -->
+
+      <%-include('./../_component/_hero-banner-company',{path:path,}) %>
+      <!-- banner section end -->
+
+      <!-- message section start -->
+      <section id="message-container">
+        <h2 id="message-title">Message</h2>
+        <h3>代表挨拶</h3>
+        <div id="message-content">
+          <div id="content">
+            <p class="vertical" id="vertical-message">Message</p>
+            <p>
+              世界経済の発展には必要不可欠な物流。その中でも海運は、低コスト・大量輸送の筆頭として人々の生活に深く根付いてまいりました。
+              私ども平安海商は“安全・確実”な海運を通じてより高度なサービスをお客様に提供することを基本理念として日々の企業活動に鋭意努力しております。海運を通じて世界の豊かさに貢献できるという喜びの反面、その社会的責任を深く感じる次第です。
+              今後も当社は、数多の経験を糧とした配船能力を強みとしてお客様・社会から信頼される企業であり続けれるよう努めてまいります。
+              「期待に応え続ける会社」を目指しますので今後も皆様のご愛顧を賜りますとともに、ご指導、ご鞭撻の程宜しくお願い申し上げます。
+            </p>
+          </div>
+          <img src="" alt="" />
+        </div>
+      </section>
+      <!-- message section end -->
+
+      <!-- company profile section start -->
+      <section id="company-container">
+        <h2>Company profile</h2>
+        <h3>会社概要</h3>
+
+        <table cellspacing="0" cellpadding="0">
+          <tr>
+            <th class="blue-line">会社名</th>
+            <th>平安海商株式会社</th>
+          </tr>
+          <tr>
+            <th class="blue-line">代表者</th>
+            <th>代表取締役社長 柳沢 明志</th>
+          </tr>
+          <tr>
+            <th class="blue-line">所在地</th>
+            <th>〒104-0032東京都中央区八丁堀3-3-3 平安海商ビル</th>
+          </tr>
+          <tr>
+            <th class="blue-line">TEL</th>
+            <th>03-6661-9537</th>
+          </tr>
+          <tr>
+            <th class="blue-line">FAX</th>
+            <th>03-6661-9538</th>
+          </tr>
+          <tr>
+            <th class="blue-line">取引銀行</th>
+            <th>三菱東京UFJ銀行 三井住友銀行</th>
+          </tr>
+          <tr>
+            <th class="blue-line">資本金</th>
+            <th>9,000,000円</th>
+          </tr>
+          <tr>
+            <th class="blue-line" id="vertical-aline">事業内容</th>
+            <th>
+              船舶用船業 <br />船舶代理業 <br />船舶サービス業 <br />貿易業
+            </th>
+          </tr>
+
+          <p class="vertical" id="vertical-company">Company profile</p>
+        </table>
+      </section>
+      <!-- company profile section end -->
+
+      <!-- access section start -->
+      <section id="access-container">
+        <h2>Access</h2>
+        <h3>アクセス</h3>
+        <div id="access-boxes-wrapper">
+          <div id="access-boxes">
+            <div id="access-address">
+              <h3>所在地</h3>
+              <p>
+                〒104-0032東京都中央区八丁堀3-3-3 平安海商ビル
+                <br />TEL:03-6661-9537　FAX:03-6661-9538
+              </p>
+            </div>
+            <div id="access-routes">
+              <h3>アクセス</h3>
+              <p>
+                電車でお越しの場合 ： <br />
+                【都営浅草線】宝町駅 A2出口から徒歩3分 <br />
+                【東京メトロ銀座線】京橋駅 A4出口から徒歩6分 <br />
+                【東京メトロ日比谷線】八丁堀駅 A3出口から徒歩5分 <br />
+                【JR各線】東京駅 八重洲口から徒歩12分
+              </p>
+            </div>
+          </div>
+          <img alt="" />
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.0785911036874!2d139.7739741!3d35.675066799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018895f497cbe93%3A0xba66658d4785a542!2zSmFwYW4sIOOAkjEwNC0wMDMyIFRva3lvLCBDaHVvIENpdHksIEhhdGNoxY1ib3JpLCAzLWNoxY1tZeKIkjPiiJIzIOW5s-Wuiea1t-WVhuODk-ODqw!5e0!3m2!1sen!2sus!4v1690888363596!5m2!1sen!2sus"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <p class="vertical" id="vertical-access">Access</p>
+      </section>
+      <!-- access section end -->
+
+      <!-- contact section start -->
+      <%-include('./../_component/_contact',{path:path,}) %>
+      <!-- contact section end -->
+    </main>
+
+    <%- include('./../_component/_footer',{path:path,}) %>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+<%_ const path='./'; _%>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <%- include('./_component/_head', {path:path,meta:data.meta['home'],})%>
+  </head>
+  <body>
+    <%- include('./_component/_header',{path:path,}) %>
+
+    <main>
+      <!-- hero section start -->
+      <section>
+        <div class="hero-container">
+          <div class="hero-content">
+            <h1 id="company-name">HEIAN MARINE <br />CORPORATION</h1>
+            <div id="division"></div>
+            <p id="company-slogan">大海原へ信頼と豊かさを運ぶ</p>
+          </div>
+          <div id="hero-scroll">
+            <i class="fa-regular fa-circle"></i>
+          </div>
+        </div>
+      </section>
+      <!-- hero section end -->
+      <!-- services section start -->
+      <section class="service-container">
+        <h2 id="service-title">Services</h2>
+        <h3>事業内容</h3>
+
+        <div class="boxes-wrapper">
+          <div class="box" id="service01">
+            <small class="vertical">service01</small>
+            <div class="box-content">
+              <small>01</small>
+
+              <h2>
+                <span>Ship chartering services</span><br />
+                船舶用船業
+              </h2>
+              <a href="http://localhost:3000/service/" title="船舶用船業"
+                >船舶用船業を見る<i class="fa-solid fa-circle-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="box" id="service02">
+            <small class="vertical">service02</small>
+            <div class="box-content">
+              <small>02</small>
+              <h2>
+                <span>Ship chartering services</span><br />
+                船舶サービス業
+              </h2>
+              <a href="http://localhost:3000/service/" title="船舶サービス業"
+                >船舶サービス業を見る<i
+                  class="fa-solid fa-circle-arrow-right"
+                ></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="box" id="service03">
+            <small class="vertical">service03</small>
+            <div class="box-content">
+              <small>03</small>
+              <h2>
+                <span>Ship chartering services</span><br />
+                船舶代理業
+              </h2>
+              <a href="http://localhost:3000/service/" title="船舶代理業"
+                >船舶代理業を見る<i class="fa-solid fa-circle-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="box" id="service04">
+            <small class="vertical">service04</small>
+            <div class="box-content">
+              <small>04</small>
+              <h2>
+                <span>Ship chartering services</span><br />
+                貿易業
+              </h2>
+              <a href="http://localhost:3000/service/" title="貿易業"
+                >貿易業を見る <i class="fa-solid fa-circle-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <a href="http://localhost:3000/service/" title="事業内容" class="btn">
+          事業内容を見る
+          <i class="fa-solid fa-circle-arrow-right"></i>
+        </a>
+      </section>
+      <!-- services section end -->
+      <!-- company/recuit section start -->
+      <section class="cards-wrapper">
+        <div class="card" id="card-company">
+          <div class="card-content">
+            <h2>Company</h2>
+            <h3>会社案内</h3>
+            <a href="http://localhost:3000/company/" title="会社案内"
+              >会社案内を見る<i class="fa-solid fa-circle-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+        <div class="card" id="card-recruit">
+          <div class="card-content">
+            <h2>Recruit</h2>
+            <h3>採用情報</h3>
+            <a href="http://localhost:3000/recruit/" title="採用情報"
+              >採用情報を見る<i class="fa-solid fa-circle-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+      <!-- company/recuit section end -->
+
+      <!-- contact section start -->
+      <%-include('./_component/_contact',{path:path,}) %>
+      <!-- contact section end -->
+    </main>
+
+    <%- include('./_component/_footer',{path:path,}) %>
+  </body>
+</html>
+　　　　　　　　　　　

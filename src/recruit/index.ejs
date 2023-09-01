@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <%_ const path='./../'; _%> <%- include('./../_component/_head', {
+    path:path,meta:data.meta['about'],}) %>
+  </head>
+  <body>
+    <%- include('./../_component/_header',{path:path,}) %>
+
+    <main>
+      <!-- banner section start -->
+      <%-include('./../_component/_hero-banner-recruit',{path:path,}) %>
+      <!-- banner section end -->
+
+      <!-- requirement section start -->
+
+      <section id="requirement-container">
+        <h2>Requirement</h2>
+        <h3>採用情報</h3>
+        <p>
+          当社では、日本、中国、韓国、ロシア、東南アジア間の海上輸送において、お客様の大切な貨物を「迅速、安全、確実」にお届けできるよう、日々努力して参ります。
+          将来の基幹社員となる若い力を求めています。
+        </p>
+
+        <table id="requirement-table" cellspacing="0" cellpadding="0">
+          <tr>
+            <th class="blue-line">職種</th>
+            <th>営業総合職（正社員）若干名、ポートキャプテン 1名</th>
+          </tr>
+          <tr>
+            <th class="blue-line">対象</th>
+            <th>大学卒業見込者、転職希望者</th>
+          </tr>
+          <tr>
+            <th class="blue-line">期間</th>
+            <th>随時</th>
+          </tr>
+          <tr>
+            <th class="blue-line">職務内容</th>
+            <th>
+              用船部門：お客様（荷主）に最適な輸送方法を提案し、集荷、配船等の業務。
+            </th>
+          </tr>
+          <tr>
+            <th class="blue-line">勤務地</th>
+            <th>東京本社</th>
+          </tr>
+          <tr>
+            <th class="blue-line">勤務時間</th>
+            <th>9:00～17:30</th>
+          </tr>
+          <tr>
+            <th class="blue-line">資本金</th>
+            <th>9,000,000円</th>
+          </tr>
+          <tr>
+            <th class="blue-line">給与</th>
+            <th>当社給与規定による</th>
+          </tr>
+          <tr>
+            <th class="blue-line">昇給</th>
+            <th>年1回（4月)</th>
+          </tr>
+          <tr>
+            <th class="blue-line">賞与</th>
+            <th>年2回（7、12月）、決算賞与（3月/業績による）</th>
+          </tr>
+          <tr>
+            <th class="blue-line">休日</th>
+            <th>
+              土・日・祝日<br />
+              年末年始、夏季休暇、年次休暇、慶弔休暇等
+            </th>
+          </tr>
+          <tr>
+            <th class="blue-line">福利厚生</th>
+            <th>厚生年金、健康保険、雇用保険等完備、退職金制度</th>
+          </tr>
+          <tr>
+            <th class="blue-line">交通費</th>
+            <th>全額実費支給</th>
+          </tr>
+          <tr>
+            <th class="blue-line">選考方法</th>
+            <th>
+              一次（人事）面接<br />
+              二次（役員）面接
+            </th>
+          </tr>
+          <tr>
+            <th class="blue-line" id="vertical-aline">応募方法</th>
+            <th>
+              履歴書（手書）及び経歴書を下記まで送付願います。<br />
+              〒104-0032 東京都中央区八丁堀3-3-3 平安海商ビル平安海商株式会社
+              <br />
+              総務チーム 人事担当者宛
+            </th>
+          </tr>
+
+          <p class="vertical" id="vertical-requirement">Requirement</p>
+        </table>
+      </section>
+      <!-- requirement section end -->
+
+      <!-- contact section start -->
+      <%-include('./../_component/_contact',{path:path,}) %>
+      <!-- contact section end -->
+    </main>
+
+    <%- include('./../_component/_footer',{path:path,}) %>
+  </body>
+</html>

@@ -1,0 +1,206 @@
+@use "./../foundation/system" as s;
+
+/* contact section */
+
+.contact-container {
+  background-image: url(./../../asset/img/contact.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  margin-inline: auto;
+  margin-top: 5rem;
+  position: relative;
+  height: 38.875rem;
+  max-width: 102.625rem;
+
+  &::before {
+    background: var(--clr-primary-700);
+    content: "";
+    clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+    top: -5rem;
+    left: -5rem;
+    position: absolute;
+    width: 34.34375rem;
+    height: 40.1875rem;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "WE TRANSPORT TRUST AND WELLNESS TO";
+    color: var(--clr-neutral-200);
+    font-family: var(--ff-secondary);
+    font-size: 13.75rem;
+    font-weight: var(--fw-semi-bold);
+    letter-spacing: 0.6875rem;
+    overflow: hidden;
+    top: -20rem;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    width: 100vw;
+    height: 20rem;
+    z-index: 5;
+  }
+
+  h2 {
+    font-size: var(--fs-900);
+  }
+
+  h3 {
+    color: var(--clr-primary-700);
+    font-size: var(--fs-600);
+    margin-bottom: 2.56rem;
+  }
+
+  .cols-wrapper {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+
+    .col {
+      align-items: center;
+      background-color: var(--clr-primary-800);
+      color: var(--clr-neutral-100);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 17.375rem;
+      width: 38.75rem;
+
+      h5 {
+        font-size: var(--fs-500);
+        margin-bottom: var(--size-400);
+      }
+      p {
+        font-family: var(--ff-secondary);
+        letter-spacing: 0.2rem;
+      }
+
+      span {
+        font-size: var(--fs-750);
+        font-weight: var(--fw-semi-bold);
+        letter-spacing: 0.45rem;
+      }
+    }
+  }
+}
+
+/* contact section */
+
+@media (max-width: 767px) {
+  :root {
+    /* FONT SIZE */
+    --fs-400: 0.875rem; /* Regular size <p>*/
+    --fs-500: 1rem; /* <h5>*/
+    --fs-600: 1.125rem; /* <h3>*/
+    --fs-900: 2.625rem; /*<h1>&<h2>*/
+
+    --fs-primary-heading: var(--fs-900);
+    --fs-body: var(--fs-400);
+  }
+
+  html {
+    font-size: 100%;
+  }
+
+  body {
+    font-size: var(--fs-body);
+  }
+
+  h1,
+  h2 {
+    font-size: var(--fs-primary-heading);
+    font-weight: var(--fw-semi-bold);
+    letter-spacing: 0.13125rem;
+  }
+
+  h3 {
+    font-size: var(--fs-600);
+    letter-spacing: 0.05625rem;
+  }
+
+  h5 {
+    font-size: var(--fs-500);
+    letter-spacing: 0.1rem;
+  }
+
+  a {
+    letter-spacing: 0.14rem;
+  }
+
+  p,
+  address {
+    font-size: 0.75rem;
+  }
+
+  small {
+    font-size: 0.625rem;
+    font-weight: var(--fw-bold);
+    letter-spacing: 0.125rem;
+  }
+
+  section {
+    padding: var(--size-400);
+  }
+
+  .btn {
+    border: 0.125rem solid var(--clr-neutral-100);
+    padding: var(--size-400) var(--size-600);
+  }
+
+  .contact-container {
+    width: 100vw;
+    height: 39.4375rem;
+
+    &::before {
+      top: -3rem;
+      left: -1rem;
+      width: 6.8125rem;
+      height: 8rem;
+      z-index: -1;
+    }
+
+    &::after {
+      font-size: 6.25rem;
+      letter-spacing: 0.3125rem;
+      top: -13rem;
+      height: 9.25rem;
+    }
+
+    h2 {
+      font-size: var(--fs-900);
+      padding-top: var(--size-600);
+    }
+
+    h3 {
+      color: var(--clr-neutral-600);
+      margin-bottom: var(--size-450);
+    }
+
+    .cols-wrapper {
+      align-items: center;
+      flex-direction: column;
+      gap: 1.25rem;
+
+      .col {
+        width: 18.1875rem;
+        height: 12.1875rem;
+
+        h5 {
+          margin-bottom: 0;
+        }
+        p {
+          letter-spacing: 0.2rem;
+        }
+
+        span {
+          font-size: 1.5rem;
+          font-weight: var(--fw-semi-bold);
+          letter-spacing: 0.45rem;
+        }
+      }
+    }
+  }
+}

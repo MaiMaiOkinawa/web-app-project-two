@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <%_ const path='./../'; _%> <%- include('./../_component/_head', {
+    path:path,meta:data.meta['about'],}) %>
+  </head>
+  <body>
+    <%- include('./../_component/_header',{path:path,}) %>
+
+    <main>
+      <section id="about"></section>
+      <h1 style="color: red">hello world</h1>
+    </main>
+
+    <%- include('./../_component/_footer',{path:path,}) %>
+  </body>
+</html>

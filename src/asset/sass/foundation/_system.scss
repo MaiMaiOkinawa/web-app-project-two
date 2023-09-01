@@ -1,0 +1,162 @@
+/* system
+--------------------------- */
+
+// color system
+// ---------------------
+$c-base: #fff;
+$c-base-sub: #fff;
+$c-body: #333;
+$c-accent: #0568bf;
+
+:root {
+  /* COLOR */
+
+  /* <-- primary-color --> */
+  --clr-primary-200: rgba(255, 255, 255, 0.85); /* <-- Header */
+  --clr-primary-300: #9e0000; /* <-- alert color */
+  --clr-primary-400: #0568bf; /* <-- 400 set as standard */
+  --clr-primary-500: #0567bd; /* <-- Big circle bottom & hero heading bar*/
+  --clr-primary-600: #014fa1; /* <-- xsm icon arrow */
+  --clr-primary-700: #003d7c; /* <-- Contact col sub-title */
+  --clr-primary-800: rgba(1, 46, 93, 0.9); /* <-- Contact col */
+
+  /* <-- primary-grandient-color --> */
+
+  --clr-gradient-100: linear-gradient(144deg, #0568bf 0%, #014fa1 100%);
+  --clr-gradient-200: linear-gradient(31deg, #012142 0%, #0568bf 100%);
+  --clr-gradient-300: linear-gradient(180deg, #012142 0%, #0568bf 100%);
+  --clr-gradient-700: inear-gradient(180deg, #030303 0%, #003d7c 100%);
+
+  --clr-gradient-400: linear-gradient(#014fa1, #0568bf);
+  --clr-gradient-500: linear-gradient(#014fa1, #0462b8, #0568bf);
+  --clr-gradient-600: linear-gradient(#012142, #0568bf);
+  --clr-gradient-800: linear-gradient(#030303, #003d7c);
+
+  /* <-- neutral-color --> */
+  --clr-neutral-100: #fff; /* Light color */
+  --clr-neutral-200: #f2f4f7; /* <-- Form bg */
+  --clr-neutral-300: #f3f3f3; /* <-- Hero heading bar*/
+  --clr-neutral-400: #fff5f6; /* <-- h1 color*/
+  --clr-neutral-500: rgba(209, 209, 209, 0.82); /* <-- contact form border*/
+  --clr-neutral-600: #333; /* <-- Primary body text */
+  --clr-neutral-900: #000; /* Dark color */
+
+  /* FONT FAMILY */
+  --ff-primary: "Gothic A1", sant-serif; /* <-- 400, 600, 700 | Yu Gothic Not yet downloaded*/
+  --ff-secondary: "Oswald", sant-serif; /* <-- 600, 700*/
+  --ff-tertiary: "Inter", sant-serif; /* <-- 700 */
+  --ff-minor: "DIN Condensed", sant-serif; /* <-- Need it?? Not yet downloaded*/
+
+  /* Re-custom properties here*/
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-secondary);
+
+  /* FONT WEIGHT */
+  --fw-thin: 300;
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  /* FONT SIZE */
+  --fs-400: 1rem; /* Set as a regular size <p>*/
+  --fs-500: 1.125rem; /* 18px <h5>*/
+  --fs-550: 1.25rem; /* 20px <h4>*/
+  --fs-600: 1.5rem; /* 24px <h3>*/
+  --fs-700: 2rem; /* 32px*/
+  --fs-750: 2.25rem; /* 36px <h2> */
+  --fs-800: 4rem; /* 64px Numeric bullet point*/
+  --fs-850: 6rem; /* 96px Hero*/
+  --fs-900: 6.25rem; /* 100px <h1>*/
+
+  /* Re-custom properties here*/
+  --fs-primary-heading: var(--fs-900);
+  --fs-secondary-heading: var(--fs-750);
+  --fs-body: var(--fs-400);
+  --fs-nav: var(--fs-500);
+  --fs-button: var(--fs-500);
+
+  /* SIZE */
+  --size-100: 0.25rem; /* 4px */
+  --size-200: 0.5rem; /* 8px */
+  --size-300: 0.75rem; /* 12px */
+  --size-400: 1rem; /* 16px */
+  --size-450: 1.5rem; /* 24px */
+  --size-500: 1.75rem; /* 28px */
+  --size-600: 2rem; /* 32px */
+  --size-650: 3rem; /* 48px */
+  --size-700: 4rem; /* 64px */
+  --size-800: 6rem; /* 96px */
+  --size-850: 7.5rem; /* 120px */
+  --size-900: 10rem; /* 160px */
+}
+
+// transition
+// ---------------------
+@mixin transition-base($second: 0.4s) {
+  transition: all $second;
+}
+
+// content max-width
+// ---------------------
+@mixin content-maxwidth($px: 1200px) {
+  max-width: $px;
+}
+
+// font system
+// ---------------------
+@mixin garamond($weight: bold) {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", Meiryo, sans-serif;
+  font-weight: $weight;
+}
+
+// Google Font Awesome
+// ---------------------
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+// responsive system
+// ---------------------
+@mixin breakpoint($point) {
+  @if $point == sp {
+    @media (max-width: 880px) {
+      @content;
+    }
+  }
+  @if $point == pc {
+    @media (min-width: 881px) {
+      @content;
+    }
+  }
+}
+
+.sp-only {
+  display: inline-block;
+
+  @include breakpoint(pc) {
+    display: none;
+  }
+}
+
+.pc-only {
+  display: inline-block;
+
+  @include breakpoint(sp) {
+    display: none;
+  }
+}
+
+.clearfix {
+  display: block;
+
+  &:before {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}

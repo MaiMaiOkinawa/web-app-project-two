@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <%_ const path='./../'; _%> <%- include('./../_component/_head', {
+    path:path,meta:data.meta['about'],}) %>
+  </head>
+  <body>
+    <%- include('./../_component/_header',{path:path,}) %>
+
+    <main>
+      <!-- banner section start -->
+      <%-include('./../_component/_hero-banner-contact',{path:path,}) %>
+      <!-- banner section end -->
+
+      <!-- contact page section start -->
+      <section id="contact-container">
+        <h2>Contact</h2>
+        <h3>お問い合わせ</h3>
+        <p>
+          弊社に興味をお持ちいただきありがとうございます。メールでのお問合わせは下記フォームより必要項目をご入力の上
+          お問い合わせください。担当者より折り返しご連絡いたします。
+        </p>
+        <form
+          id="contact-form"
+          action="mail.php"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <div class="form-box">
+            <label id="name-label" for="お名前">お名前 <span>Name</span></label>
+
+            <div class="wrapper-messages">
+              <input
+                type="text"
+                id="name"
+                name="お名前"
+                class="form-control"
+                placeholder="例:山田　太郎"
+                required
+                data-error_message="#name_error"
+              />
+              <div class="error-comments" id="name_error"></div>
+
+              <input
+                type="text"
+                id="hurigana"
+                name="ふりがな"
+                class="form-control"
+                placeholder="例:やまだ　たろう"
+                data-error_message="#hurinaga_error"
+              />
+              <!-- <div class="error-comments" id="hurigana_error"></div> -->
+            </div>
+          </div>
+
+          <div class="form-box">
+            <label for="メールアドレス"
+              >メールアドレス<span>E-mail address</span></label
+            >
+            <div class="wrapper-messages">
+              <input
+                type="email"
+                id="email"
+                name="Email"
+                class="form-control"
+                placeholder="例:info@heianmarine.co.jp"
+                data-error_message="#email_error"
+              />
+              <div class="error-comments" id="email_error"></div>
+            </div>
+          </div>
+          <div class="form-box">
+            <label for="会社名">会社名 <span>Company name</span></label>
+            <div class="wrapper-messages">
+              <input
+                type="text"
+                id="company-name"
+                name="会社名"
+                class="form-control"
+                placeholder="例:平安海商株式会社"
+                data-error_message="#company_error"
+              />
+              <div class="error-comments" id="company_error"></div>
+            </div>
+          </div>
+          <div class="form-box" id="form-box-message">
+            <label id="message-label" for="お問い合わせ内容"
+              >お問い合わせ内容 <span>Inquiry detail</span></label
+            >
+            <div class="wrapper-messages">
+              <textarea
+                id="message"
+                name="お問い合わせ内容"
+                class="form-control"
+                rows="10"
+                maxlength="3000"
+                placeholder="お問い合わせ内容の詳細をご入力下さい"
+                data-error_message="#message_error"
+              ></textarea>
+
+              <div class="error-comments" id="message_error"></div>
+            </div>
+          </div>
+
+          <div class="form-box">
+            <button id="btnSend" type="submit" value="　 確認 　">
+              確認画面へ進む<i
+                class="fa-solid fa-arrow-right"
+                style="color: #ffffff"
+              ></i>
+            </button>
+          </div>
+        </form>
+
+        <p class="vertical" id="vertical-contact">Contact</p>
+      </section>
+
+      <!-- contact page section end -->
+
+      <!-- contact section start -->
+      <%-include('./../_component/_contact',{path:path,}) %>
+      <!-- contact section end -->
+    </main>
+
+    <%- include('./../_component/_footer',{path:path,}) %>
+
+    <script>
+      $(function () {
+        $("#contact-form").validate({
+          rules: {
+            お名前: { required: true },
+            //ふりがな: { required: true },
+            Email: { required: true, email: true },
+            会社名: { required: true },
+            お問い合わせ内容: { required: true },
+          },
+          messages: {
+            お名前: {
+              required: "※ お名前は必須項目です。",
+            },
+            //ふりがな: {
+            //required: "※ ふりがなは必須項目です。",
+            // },
+            Email: {
+              required: "※ メールアドレスは必須項目です。",
+              email: "Eメールの形式で入力して下さい。",
+            },
+            会社名: {
+              required: "※ 会社名は必須項目です。",
+            },
+            お問い合わせ内容: {
+              required: "※ お問い合わせ内容は必須項目です。",
+            },
+          },
+          errorElement: "span",
+          errorPlacement: function (error, elements) {
+            error.appendTo(elements.data("error_message"));
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

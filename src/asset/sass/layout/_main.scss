@@ -1,0 +1,505 @@
+@use "./../foundation/system" as s;
+@use "header";
+@use "hero";
+@use "footer";
+@use "contact";
+
+// service section
+
+.service-container {
+  background: url(./../../asset/img/top-worldmap.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 20rem;
+  margin-bottom: var(--size-650);
+  position: relative;
+  padding-right: 0;
+  text-align: center;
+
+  &::after {
+    background: var(--clr-gradient-600);
+    content: "";
+    position: absolute;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+    top: 7rem;
+    right: 0;
+    width: 43rem;
+    height: 57rem;
+    z-index: -0;
+  }
+
+  #service-title {
+    font-size: var(--fs-900);
+    font-weight: var(--fw-semi-bold);
+    margin-left: 6.63rem;
+    position: relative;
+    text-align: left;
+
+    &::before {
+      background: var(--clr-primary-400);
+      content: " ";
+      display: block;
+      height: 0.125rem;
+      width: var(--size-800);
+      position: absolute;
+      top: 5.5rem;
+      left: -7rem;
+    }
+  }
+  h3 {
+    margin-left: 6.63rem;
+    text-align: left;
+  }
+
+  .boxes-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    margin-block: var(--size-700);
+    position: relative;
+    text-align: left;
+    width: 100%;
+    z-index: 5;
+
+    .box {
+      position: relative;
+      height: 35.5rem;
+      width: 28rem;
+
+      .vertical {
+        font-size: 0.875rem;
+        font-weight: var(--fw-thin);
+        letter-spacing: 0.0875rem;
+        position: absolute;
+        top: var(--size-100);
+        right: 0;
+        writing-mode: vertical-rl;
+
+        &::after {
+          background: var(--clr-neutral-100);
+          content: " ";
+          display: block;
+          position: absolute;
+          top: -0.2rem;
+          height: 35.5rem;
+          width: 0.0625rem;
+        }
+      }
+
+      .box-content {
+        inset: var(--size-600) 3.56rem;
+        position: absolute;
+        padding-block: var(--size-800);
+
+        small {
+          font-size: 0.75rem;
+          font-weight: var(--fw-bold);
+          letter-spacing: 0.15rem;
+        }
+
+        h2 {
+          background: transparent;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: var(--clr-neutral-100);
+          font-size: var(--fs-750);
+          letter-spacing: 0.36rem;
+          margin-bottom: var(--size-700);
+
+          span {
+            font-size: var(--fs-500);
+            font-weight: var(--fw-bold);
+            letter-spacing: 0.1125rem;
+            margin-block: var(--size-450);
+          }
+        }
+
+        a {
+          letter-spacing: 0.16rem;
+          position: relative;
+        }
+
+        i {
+          color: var(--clr-neutral-100);
+          cursor: pointer;
+          font-size: 5rem;
+          position: absolute;
+          bottom: var(--size-900);
+          left: 11rem;
+          top: -2rem;
+          margin-inline: 1.3rem;
+        }
+      }
+    }
+    #service01 {
+      background: url(./../../asset/img/top-service01.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    #service02 {
+      background: url(./../../asset/img/top-service02.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    #service03 {
+      background: url(./../../asset/img/top-service03.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    #service04 {
+      background: url(./../../asset/img/top-service04.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  .btn {
+    align-items: center;
+    background: var(--clr-gradient-500);
+    border: none;
+    display: flex;
+    font-size: var(--fs-500);
+    justify-content: center;
+    letter-spacing: 0.135rem;
+    margin-inline: auto;
+    position: inline;
+    padding: 1.2rem var(--size-450);
+    width: 18.75rem;
+    height: var(--size-700);
+
+    i {
+      font-size: 2.5rem;
+      padding-bottom: 0.15rem;
+      padding-left: 1.2rem;
+    }
+  }
+}
+
+//company / recruit section
+.cards-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15rem;
+  width: 100vw;
+
+  .card {
+    position: relative;
+    height: 35rem;
+    width: 50%;
+
+    &::before {
+      background-color: var(--clr-primary-800);
+      content: "";
+      clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+      inset: 0;
+      position: absolute;
+      width: 55%;
+    }
+
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--size-400);
+      inset: 0 6.63rem;
+      position: absolute;
+      padding-block: var(--size-800);
+
+      h2 {
+        background: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: var(--clr-neutral-100);
+        font-size: var(--fs-900);
+      }
+      h3 {
+        color: var(--clr-neutral-100);
+      }
+
+      a {
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        letter-spacing: 0.16rem;
+
+        i {
+          color: var(--clr-neutral-100);
+          cursor: pointer;
+          font-size: 5rem;
+          margin-inline: 1.3rem;
+          margin-block: var(--size-600);
+        }
+      }
+    }
+  }
+  #card-company {
+    background: url(./../../asset/img/top-company.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  #card-recruit {
+    background: url(./../../asset/img/top-recruit.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    /* FONT SIZE */
+    --fs-400: 0.875rem; /* Regular size <p>*/
+    --fs-500: 1rem; /* <h5>*/
+    --fs-600: 1.125rem; /* <h3>*/
+    --fs-900: 2.625rem; /*<h1>&<h2>*/
+
+    --fs-primary-heading: var(--fs-900);
+    --fs-body: var(--fs-400);
+  }
+
+  html {
+    font-size: 100%;
+  }
+
+  body {
+    font-size: var(--fs-body);
+  }
+
+  h1,
+  h2 {
+    font-size: var(--fs-primary-heading);
+    font-weight: var(--fw-semi-bold);
+    letter-spacing: 0.13125rem;
+  }
+
+  h3 {
+    font-size: var(--fs-600);
+    letter-spacing: 0.05625rem;
+  }
+
+  h5 {
+    font-size: var(--fs-500);
+    letter-spacing: 0.1rem;
+  }
+
+  a {
+    letter-spacing: 0.14rem;
+  }
+
+  p,
+  address {
+    font-size: 0.75rem;
+  }
+
+  small {
+    font-size: 0.625rem;
+    font-weight: var(--fw-bold);
+    letter-spacing: 0.125rem;
+  }
+
+  section {
+    padding: var(--size-400);
+  }
+
+  .btn {
+    border: 0.125rem solid var(--clr-neutral-100);
+    padding: var(--size-400) var(--size-600);
+  }
+
+  // service section
+  .service-container {
+    padding-top: 1rem;
+    position: relative;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0rem;
+    text-align: none;
+
+    &::after {
+      background: var(--clr-gradient-200);
+      content: "";
+      position: absolute;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+      top: 1.2rem;
+      right: 5%;
+      width: 6.8125rem;
+      height: 8rem;
+      // z-index: 0;
+    }
+
+    #service-title {
+      font-size: var(--fs-900);
+      font-weight: var(--fw-semi-bold);
+      margin-left: 2.25rem;
+      position: relative;
+      text-align: left;
+
+      &::before {
+        background: var(--clr-primary-400);
+        content: " ";
+        display: block;
+        width: 2.25rem;
+        height: 0.125rem;
+        position: absolute;
+        top: 2.2rem;
+        left: -2.5rem;
+      }
+    }
+    h3 {
+      margin-left: 2.25rem;
+      text-align: left;
+    }
+
+    .boxes-wrapper {
+      flex-wrap: none;
+      flex-direction: column;
+      justify-content: left;
+      margin-block: var(--size-400);
+      position: relative;
+      width: 100%;
+
+      .box {
+        position: relative;
+        width: 80%;
+        height: var(--size-900);
+
+        .vertical {
+          font-size: 0.625rem;
+          letter-spacing: 0.0625rem;
+
+          &::after {
+            background: var(--clr-neutral-100);
+            height: var(--size-900);
+          }
+        }
+
+        .box-content {
+          inset: 2.5rem 2.5rem 3.5rem;
+          position: absolute;
+          padding-block: 0;
+
+          small {
+            font-size: 0.625rem;
+            letter-spacing: 0.125rem;
+          }
+
+          h2 {
+            background: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: var(--clr-neutral-100);
+            font-size: var(--fs-600);
+            letter-spacing: 0.2rem;
+            margin-bottom: 0;
+
+            span {
+              font-size: 0.625rem;
+              letter-spacing: 0.03125rem;
+              margin-block: 2rem;
+            }
+          }
+
+          a {
+            font-size: 0;
+          }
+
+          i {
+            bottom: 0%;
+            font-size: 2.5rem;
+            margin-top: -1.5rem;
+            position: absolute;
+            right: 15%;
+          }
+        }
+      }
+    }
+    .btn {
+      font-size: var(--fs-400);
+      margin-top: var(--size-600);
+      padding: 1rem 2rem;
+      width: 15.625rem;
+
+      i {
+        font-size: 2rem;
+        width: 2.08331rem;
+        height: var(--size-600);
+        padding-bottom: 2.2rem;
+        padding-left: var(--size-400);
+      }
+    }
+  }
+
+  //company / recruit section
+  .cards-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: start;
+    margin-bottom: 11rem;
+    width: 100vw;
+
+    .card {
+      background-color: var(--clr-primary-800);
+
+      position: relative;
+      width: 80%;
+      height: 15.625rem;
+
+      &::before {
+        background-color: var(--clr-primary-800);
+        content: "";
+        clip-path: polygon(0 0, 100% 0, 73% 100%, 0% 100%);
+        inset: 0;
+        position: absolute;
+        width: 63%;
+      }
+
+      &::after {
+        background-color: var(--clr-primary-400);
+        content: " ";
+        display: block;
+        position: absolute;
+        clip-path: polygon(0 0, 98% 0, 100% 100%, 0% 100%);
+        top: -0.5rem;
+        left: 0;
+        height: var(--size-200);
+        width: 11.6875rem;
+      }
+
+      .card-content {
+        flex-direction: column;
+        gap: 0;
+        top: var(--size-600);
+        left: 2.5rem;
+        padding-block: 0;
+
+        a {
+          letter-spacing: 0.14rem;
+
+          i {
+            cursor: pointer;
+            font-size: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 438px) {
+  .service-container .box {
+    .box {
+      width: 22.1875rem;
+    }
+  }
+  .cards-wrapper {
+    .card {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <%_ const path='./../'; _%> <%- include('./../_component/_head', {
+    path:path,meta:data.meta['service'],}) %>
+  </head>
+  <body>
+    <%-include('./../_component/_header',{path:path,}) %>
+
+    <main>
+      <!-- banner section start -->
+      <%-include('./../_component/_hero-banner',{path:path,}) %>
+
+      <!-- banner section end -->
+
+      <!-- our services section start -->
+
+      <section id="our-service-container">
+        <h2 id="our-service-title">Our services</h2>
+        <h3>事業内容</h3>
+        <div id="service-content">
+          <div id="content">
+            <p class="vertical" id="vertical-service">Our services</p>
+            <p>
+              世界の主要地域の経済活動によるグローバルな物流に対応して、貨物が確実に荷受人様に届くよう海運事業の一翼を担って事業を展開しております。<br />
+              当社の推進する効率的な海上輸送では、一般貨物船を保有して、あらゆる形状物の海上輸送も可能にするなど、お客様のニーズにお応えできる体制を整えております。これからも貨物の重量、形状、性質さらに輸送先を問わず、確実に対応してまいります。<br />
+              24時間絶え間なく動く不定期船の中で１００トンの小口貨物から１万トン以上の大量貨物まで、日本・中国・韓国・東南アジア・インド・中東間の海上輸送で効率的、最適な在来船で配船しております。<br />
+              取扱貨物は、設備・鋼材・鋼材半製品・丸太原木・原料などがございます。
+              原材料の多様性、貨物の種類及び貨物の大小、貿易条件など状況によって、お客様から求められる船舶条件も様々です。
+              平安海商の用船サービスは、豊富な情報、豊かな経験によってマーケットの動きを予見し、複雑な用船条件にお応えし、バラ積み貨物を競争力ある運賃で確実に輸送いたします。<br />
+              今後もお客様の大切な貨物を安全・確実・迅速にお届けすることを心掛けてまいります。
+            </p>
+          </div>
+          <img src="../asset/img/service-service.jpg" alt="" />
+        </div>
+
+        <div class="odd-container">
+          <img src="../asset/img/service-01.jpg" id="img-service01" alt="" />
+
+          <div class="odd-card">
+            <h2 class="card-title">船舶用船業</h2>
+            <p>
+              日中韓、東南アジアを中心にバラ積み貨物を在来船にて手配しております。取り扱い貨物は鋼材・設備・原料と多岐に渡り、バラ積み貨物のほぼ全てに対応可能です
+            </p>
+          </div>
+        </div>
+
+        <div class="even-container">
+          <div class="even-card">
+            <h2 class="card-title">船舶サービス業</h2>
+            <p>
+              積み上げ荷役の他に、給油・給水、船用品の手配に対応致します。またお客様からのバースターム依頼に関しましても、最善の提案をさせていただきます。
+            </p>
+          </div>
+          <img src="../asset/img/service-02.jpg" id="img-service02" alt="" />
+        </div>
+
+        <div class="odd-container">
+          <img src="../asset/img/service-03.jpg" id="img-service03" alt="" />
+
+          <div class="odd-card">
+            <h2 class="card-title">船舶代理業</h2>
+            <p id="service-three">
+              創業以来弊社が築き上げた現地代理店との信頼関係を屈指し、本船の入港から出港に関わる全ての手続きを行います。今後も質の高いサービスを追求し、お客様のご要望に対応します。
+            </p>
+          </div>
+        </div>
+
+        <div class="even-container">
+          <div class="even-card">
+            <h2 class="card-title">貿易業</h2>
+            <p id="service-four">
+              旅行用品・民芸品・食料品及び日用雑貨の輸出入販売を行っております。様々なニーズに対応しますのでお気軽にご相談ください。
+            </p>
+          </div>
+          <img src="../asset/img/service-04.jpg" id="img-service04" alt="" />
+        </div>
+      </section>
+      <!-- our services section end -->
+
+      <!-- contact section start -->
+      <%-include('./../_component/_contact',{path:path,}) %>
+      <!-- contact section end -->
+    </main>
+
+    <%- include('./../_component/_footer',{path:path,}) %>
+  </body>
+</html>
